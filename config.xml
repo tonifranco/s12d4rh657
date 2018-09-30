@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns   = "http://www.w3.org/ns/widgets"
+    xmlns:gap   = "http://phonegap.com/ns/1.0"
+    id          = "com.tonifranco.galeria"
+    versionCode = "1"
+    version     = "0.0.1" >
+  <name>Galeria</name>
+  <description>
+      Galeria de fotos.
+  </description>
+  <author href="https://sites.google.com/a/isca.es/ca-toni-1" email="toni.franco@isca.es">
+      Toni Franco
+  </author>
+  <access origin="*" />
+  <plugin name="cordova-plugin-whitelist" />
+  <plugin name="cordova-plugin-vibration" />
+</widget>

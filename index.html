@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link href="https://unpkg.com/@ionic/core@4.0.0-beta.7/css/ionic.bundle.css" rel="stylesheet">
+  <script src="https://unpkg.com/@ionic/core@4.0.0-beta.7/dist/ionic.js"></script>
+  <script src="cordova.js"></script>
+  <script src="gallery.js"></script>
+  <title>Galeria imagenes</title>
+</head>
+<body onload="onLoad()">
+  <ion-app>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Galeria imagenes</ion-title>
+        <ion-buttons slot="primary">
+	  <ion-button onclick="button('primer')" color="secondary"><ion-icon slot="icon-only" name="skip-backward"></ion-icon></ion-button>
+          <ion-button onclick="button('back')" color="secondary"><ion-icon slot="icon-only" name="arrow-dropleft"></ion-icon></ion-button>
+	  <ion-button onclick="button('pause')" color="secondary"><ion-icon slot="icon-only" name="pause"></ion-icon></ion-button>
+          <ion-button onclick="button('play')" color="secondary"><ion-icon slot="icon-only" name="play"></ion-icon></ion-button>
+	  <ion-button onclick="button('next')" color="secondary"><ion-icon slot="icon-only" name="arrow-dropright"></ion-icon></ion-button>
+ 	  <ion-button onclick="button('ultim')" color="secondary"><ion-icon slot="icon-only" name="skip-forward"></ion-icon></ion-button>         
+        </ion-buttons>
+      </ion-toolbar>
+      <ion-toolbar>
+        <ion-item>
+          <ion-range min="0" max="5000" value="4000">
+            <ion-icon slot="start" size="small" name="speedometer"></ion-icon>
+            <ion-icon slot="end" name="speedometer"></ion-icon>
+          </ion-range>
+        </ion-item>
+	<ion-item>
+        <ion-range min="0" max="150" value="50" id="vibration">
+          <ion-icon slot="start" name="trending-down"></ion-icon>
+          <ion-icon slot="end" name="trending-up"></ion-icon>
+        </ion-range>
+      </ion-item>
+      </ion-toolbar>    
+    </ion-header>
+    <ion-content>
+      
+      <ion-tabs>
+        <ion-tab label="Alicante" icon="walk">
+          <ion-slides id="walk">
+            <ion-slide><ion-img src="img/alicante1.jpg"></ion-img></ion-slide>
+            <ion-slide><ion-img src="img/alicante2.jpg"></ion-img></ion-slide>
+            <ion-slide><ion-img src="img/alicante3.jpg"></ion-img></ion-slide>
+          </ion-slides>
+        </ion-tab>
+        <ion-tab label="Madrid" icon="train">
+          <ion-slides id="train">
+            <ion-slide><ion-img src="img/madrid1.jpg"></ion-img></ion-slide>
+            <ion-slide><ion-img src="img/madrid2.jpg"></ion-img></ion-slide>
+            <ion-slide><ion-img src="img/madrid3.jpg"></ion-img></ion-slide>
+          </ion-slides>
+        </ion-tab>
+        <ion-tab label="París" icon="airplane">
+          <ion-slides id="airplane">
+            <ion-slide><ion-img src="img/paris1.jpg"></ion-img></ion-slide>
+            <ion-slide><ion-img src="img/paris2.jpg"></ion-img></ion-slide>
+            <ion-slide><ion-img src="img/paris3.jpg"></ion-img></ion-slide>
+          </ion-slides>
+        </ion-tab>
+      </ion-tabs>
+    </ion-content>
+  </ion-app>
+</body>
+</html>
